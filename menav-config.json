@@ -1,0 +1,28 @@
+{
+  "version": "1.3.0",
+  "timestamp": "2026-04-23T13:32:03.169Z",
+  "icons": {
+    "mode": "favicon",
+    "region": "cn"
+  },
+  "data": {
+    "homePageId": "common",
+    "pageTemplates": {
+      "common": "page",
+      "projects": "projects",
+      "articles": "articles",
+      "bookmarks": "bookmarks",
+      "content": "content"
+    },
+    "site": {
+      "security": {
+        "allowedSchemes": [
+          "http",
+          "https",
+          "mailto",
+          "tel"
+        ]
+      }
+    }
+  }
+}
