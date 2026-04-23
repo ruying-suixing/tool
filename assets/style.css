@@ -1,0 +1,33 @@
+/* ============================================
+   Menav Style System - Modular Entry Point
+   ============================================
+   
+   模块化 CSS 架构：
+   - 本文件作为入口，通过 @import 聚合所有模块
+   - esbuild bundle 模式会在构建时自动合并
+   - 模块导入顺序很重要！变量必须第一个导入
+   
+   ============================================ */
+
+/* 1. 基础层：变量和全局样式必须最先加载 */
+@import './styles/_variables.css';
+@import './styles/_base.css';
+@import './styles/_animations.css';
+
+/* 2. 布局层 */
+@import './styles/_layout.css';
+@import './styles/_sidebar.css';
+
+/* 3. 组件层 */
+@import './styles/_search.css';
+@import './styles/_cards.css';
+@import './styles/_modal.css';
+
+/* 4. 页面层 */
+@import './styles/_content.css';
+@import './styles/_dashboard.css';
+
+/* 5. 兜底样式（包含分类层级、GitHub热力图、响应式等）
+   注意：此文件包含所有未独立拆分的样式，部分选择器可能与上方模块重复
+   esbuild 会按导入顺序合并，后导入的样式优先级更高 */
+@import './styles/_main.css';
