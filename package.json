@@ -9,7 +9,7 @@
     "dev": "node ./scripts/dev.js",
     "dev:offline": "node ./scripts/dev-offline.js",
     "clean": "node ./scripts/clean.js",
-    "build": "node ./scripts/build.js",
+    "build": "node ./scripts/build.js && copy public\\CNAME dist\\CNAME&& copy public\\favicon.ico dist\\favicon.ico",
     "sync-articles": "node ./scripts/sync-articles.js",
     "sync-projects": "node ./scripts/sync-projects.js",
     "import-bookmarks": "node src/bookmark-processor.js",
@@ -19,7 +19,8 @@
     "format:check": "node ./scripts/format.js --check",
     "format:check:changed": "node ./scripts/format-check-changed.js",
     "check": "node ./scripts/check.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "navigation",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.28.0",
+    "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",
